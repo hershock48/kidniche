@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Glazed Web × Kid Niche · Proposal</title>
+<meta name="description" content="A website proposal for Kid Niche Christian Books. Every claim links to the evidence.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Glazed Web">
+<meta property="og:url" content="https://kidniche.glazedweb.com/">
+<meta property="og:title" content="Do you own your website?">
+<meta property="og:description" content="A website proposal for Kid Niche Christian Books, where every claim links to the proof.">
+<meta property="og:image" content="https://kidniche.glazedweb.com/pitch/kidniche/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Do you own your website? A proposal from Glazed Web.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Do you own your website?">
+<meta name="twitter:description" content="A website proposal for Kid Niche Christian Books, where every claim links to the proof.">
+<meta name="twitter:image" content="https://kidniche.glazedweb.com/pitch/kidniche/og.jpg">
+<meta name="theme-color" content="#FDF6EC">
+<style>
+
+:root{
+ --paper:#FDF6EC; --paper2:#FFF7EA; --card:#FFFDF8;
+ --ink:#2B1E16; --ink2:#201712; --body:#6B5747; --mute:#7F6D5B; --line:#E8DCC8;
+ --pink:#E84D8A; --pink-d:#CE3672;--pink-i:#C9356F; --pink-t:#FCE7F0;
+ --green:#BFE07A; --green-b:#A9D65C; --green-d:#467C3D; --green-t:#F1F8DC;
+ --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+ --serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--body);font-family:var(--sans);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4,.k,.btn,nav,th,.num,.chip{font-family:var(--sans)}
+.k{font-size:12px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--green-d)}
+h2{font-size:clamp(30px,4.4vw,48px);font-weight:800;color:var(--ink);letter-spacing:-1.6px;line-height:1.08;margin:10px 0 14px}
+h3{font-size:19px;font-weight:800;color:var(--ink);margin:34px 0 10px;letter-spacing:-.4px}
+p{margin:0 0 14px}
+strong{color:var(--ink);font-weight:600}
+a{color:var(--pink-i)}
+.rule{height:3px;width:52px;background:var(--pink);border-radius:2px;margin:0 0 18px}
+section{padding:60px 0;border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(253,246,236,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand .gl{height:34px;width:auto;display:block}
+.brand .bw{font-family:var(--sans);font-weight:800;font-size:19px;color:var(--ink);letter-spacing:-.6px;line-height:1.1}
+.brand .bw span{font-weight:350;color:var(--mute)}
+.brand span{font-size:.72rem;color:var(--mute);font-style:italic}
+nav{display:flex;gap:20px;font-size:.72rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase}
+nav a{color:var(--mute);text-decoration:none}
+nav a:hover{color:var(--pink-i)}
+@media(max-width:720px){nav{display:none}.brand .bw~span{display:none}}
+
+/* hero */
+.hero{padding:66px 0 54px;text-align:left}
+.hero .mark{height:92px;width:auto;margin-bottom:24px;display:block}
+.hero h1{font-family:var(--sans);font-size:clamp(38px,5.5vw,60px);font-weight:800;color:var(--ink);letter-spacing:-2px;line-height:1.04}
+.hero h1 em{font-style:normal;color:var(--pink)}
+.hero .sub{font-size:1.12rem;color:var(--body);margin-top:20px;max-width:31em}
+.forwho{margin-top:26px;font-family:var(--sans);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);line-height:1.9}
+.forwho b{color:var(--ink)}
+
+/* tldr */
+.tldr{background:var(--ink);color:#F6EFE4;border-radius:16px;padding:26px 26px 22px;margin-top:38px}
+.tldr .k{color:var(--green)}
+.demo .k{color:var(--green)}
+.tldr ul{list-style:none;margin:14px 0 0}
+.tldr li{display:flex;gap:12px;padding:9px 0;border-top:1px solid rgba(255,255,255,.1);font-size:.97rem;line-height:1.5}
+.tldr li:first-child{border-top:0}
+.tldr .n{font-family:var(--sans);font-weight:800;color:var(--green);flex:0 0 auto;font-size:.8rem;padding-top:3px}
+.tldr b{color:#fff}
+
+/* claim cards */
+.claim{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin:12px 0;transition:border-color .16s,transform .16s}
+.claim:hover{border-color:var(--pink);transform:translateY(-1px)}
+.claim h4{font-family:var(--sans);font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:5px;letter-spacing:-.01em}
+.claim p{font-size:.95rem;margin:0}
+.claim .verify{display:inline-flex;align-items:center;gap:7px;margin-top:12px;font-family:var(--sans);font-size:.71rem;font-weight:700;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--pink-i);text-decoration:none;border:1.5px solid var(--pink);
+ padding:7px 13px;border-radius:999px;transition:all .16s}
+.claim .verify:hover{background:var(--pink-d);color:#fff}
+.claim .verify.plain{border-color:var(--line);color:var(--mute);cursor:default}
+.claim .verify.plain:hover{background:transparent;color:var(--mute)}
+.mono{font-family:ui-monospace,Menlo,monospace;font-size:.83em;color:var(--mute)}
+
+/* calculator */
+.calc{background:var(--card);border:2px solid var(--ink);border-radius:16px;padding:26px;margin:22px 0}
+.calc label{display:block;font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-bottom:9px}
+.inputrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.money{display:flex;align-items:center;background:var(--paper);border:2px solid var(--line);border-radius:11px;padding:4px 14px;transition:border-color .16s}
+.money:focus-within{border-color:var(--pink)}
+.money span{font-family:var(--sans);font-size:1.3rem;font-weight:800;color:var(--mute)}
+.money input{border:0;background:transparent;font-family:var(--sans);font-size:1.45rem;font-weight:800;color:var(--ink);width:110px;padding:9px 6px;outline:none}
+.money em{font-style:normal;font-family:var(--sans);font-size:.8rem;color:var(--mute)}
+.presets{display:flex;gap:7px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--paper);border-radius:999px;padding:8px 14px;font-size:.78rem;font-weight:700;color:var(--body);cursor:pointer;transition:all .15s}
+.chip:hover{border-color:var(--pink);color:var(--pink-i)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.out{margin-top:22px;padding-top:20px;border-top:2px dashed var(--line);display:none}
+.out.show{display:block}
+.bars{display:grid;gap:12px;margin-bottom:16px}
+.bar .lab{display:flex;justify-content:space-between;font-family:var(--sans);font-size:.78rem;font-weight:700;color:var(--body);margin-bottom:5px}
+.bar .lab b{color:var(--ink);font-size:.95rem}
+.bar .track{height:26px;background:var(--paper);border-radius:7px;overflow:hidden;border:1px solid var(--line)}
+.bar .fill{height:100%;border-radius:6px;transition:width .5s cubic-bezier(.3,.8,.3,1)}
+.bar.stay .fill{background:repeating-linear-gradient(45deg,#E9D9C0,#E9D9C0 7px,#DECBAE 7px,#DECBAE 14px)}
+.bar.us .fill{background:linear-gradient(90deg,var(--green),var(--green-d))}
+.verdict{background:var(--green-t);border:1.5px solid var(--green);border-radius:12px;padding:15px 17px;font-size:.98rem;line-height:1.5}
+.verdict.neg{background:var(--pink-t);border-color:var(--pink)}
+.verdict b{color:var(--ink)}
+.calcnote{font-size:.82rem;color:var(--mute);margin-top:13px;line-height:1.5}
+
+/* compare table */
+.cmp{width:100%;border-collapse:collapse;margin:16px 0;font-size:.93rem}
+.cmp th{font-family:var(--sans);text-align:left;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;
+ padding:0 10px 9px 0;border-bottom:2px solid var(--ink);color:var(--ink);vertical-align:bottom}
+.cmp td{padding:12px 10px 12px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45}
+.cmp td:first-child{font-weight:700;color:var(--ink);width:24%;font-family:var(--sans);font-size:.86rem}
+.cmp td:nth-child(2){width:36%;color:var(--mute)}
+.cmp td:nth-child(3){width:40%}
+.tick{color:var(--green-d);font-weight:800}
+
+/* price */
+.pricebox{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+.pricebox>div{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:20px}
+.pricebox .n{font-family:var(--sans);font-size:2rem;font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1}
+.pricebox .l{font-size:.85rem;color:var(--mute);margin-top:7px;line-height:1.4}
+@media(max-width:600px){.pricebox{grid-template-columns:1fr}}
+
+/* demo cta */
+.demo{background:linear-gradient(135deg,#201712,#3A2416);color:#F6EFE4;border-radius:18px;padding:32px;margin:22px 0;text-align:center}
+.demo .k{color:var(--green)}
+.demo h3{color:#fff;margin:10px 0 8px;font-size:1.4rem}
+.demo p{color:#D8CBBA;font-size:.98rem;max-width:34em;margin:0 auto 20px}
+.demo a{display:inline-block;background:var(--pink-d);color:#fff;font-family:var(--sans);font-weight:700;font-size:.82rem;box-shadow:0 6px 16px -6px rgba(232,77,138,.55);
+ letter-spacing:.09em;text-transform:uppercase;padding:15px 30px;border-radius:999px;text-decoration:none;transition:all .18s}
+.demo a:hover{background:var(--green);color:var(--ink);transform:translateY(-2px)}
+
+/* steps */
+.step{display:flex;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:0}
+.step .no{font-family:var(--sans);font-weight:800;font-size:.78rem;color:#fff;background:var(--pink-d);width:28px;height:28px;
+ border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.step h4{font-family:var(--sans);font-size:1rem;font-weight:800;color:var(--ink);margin-bottom:4px}
+.step p{font-size:.95rem;margin:0}
+
+footer{background:var(--ink);color:#B9A894;padding:44px 0;font-size:.86rem;margin-top:20px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .gl-foot{height:62px;width:auto;opacity:.95}
+footer b{color:#F6EFE4;display:block;font-family:var(--sans);font-size:.95rem;margin-bottom:4px}
+footer .bw{display:block;font-weight:800;color:#F6EFE4;letter-spacing:-.6px;margin-bottom:5px}
+footer .bw span{font-weight:350;color:#A6907F}
+footer a{color:var(--green)}
+.conf{font-size:.72rem;color:#A6907F;margin-top:14px;letter-spacing:.04em}
+.note{font-size:.85rem;color:var(--mute);font-style:italic;line-height:1.5}
+
+/* --- the mark, and its drip, lifted from glazedweb.com --- */
+.gmark{display:block;overflow:visible}
+.gmark .goo{transform-box:fill-box;transform-origin:50% 0;animation:breathe 6s ease-in-out infinite}
+.gmark .wob1,.gmark .wob2,.gmark .wob3,.gmark .wobB{transform-box:fill-box;transform-origin:50% 0}
+.gmark .wob1{animation:sagg 3.8s ease-in-out -.6s infinite}
+.gmark .wob2{animation:sagg 4.9s ease-in-out -2.1s infinite}
+.gmark .wob3{animation:sagg 4.3s ease-in-out -1.3s infinite}
+.gmark .wobB{animation:sagg 5.6s ease-in-out -3s infinite}
+.gmark .string{transform-box:fill-box;transform-origin:50% 0;animation:stringy 3.4s cubic-bezier(.55,.1,.8,.5) infinite}
+.gmark .droplet{transform-box:fill-box;transform-origin:center;animation:fall 3.4s cubic-bezier(.5,.08,.85,.6) infinite}
+.gmark .droplet2{transform-box:fill-box;transform-origin:center;animation:fall2 5.1s cubic-bezier(.5,.08,.85,.6) -2.4s infinite}
+@keyframes breathe{0%,to{transform:scaleY(1)}50%{transform:scaleY(1.02)}}
+@keyframes sagg{0%,to{transform:scaleY(1) scaleX(1)}50%{transform:scaleY(1.07) scaleX(.98)}}
+@keyframes stringy{0%{transform:scaleY(.1);opacity:0}25%{transform:scaleY(.8);opacity:1}60%{transform:scaleY(1.7);opacity:.85}80%{transform:scaleY(2.4);opacity:0}to{transform:scaleY(.1);opacity:0}}
+@keyframes fall{0%{transform:translateY(-16px) scaleY(1.5) scaleX(.7);opacity:0}22%{transform:translateY(-8px) scaleY(1.2) scaleX(.85);opacity:1}60%{transform:translateY(10px) scale(1);opacity:1}to{transform:translateY(38px) scaleY(1.15) scaleX(.9);opacity:0}}
+@keyframes fall2{0%{transform:translateY(-10px) scaleY(1.4) scaleX(.75);opacity:0}25%{transform:translateY(-4px) scale(1);opacity:1}65%{transform:translateY(8px) scale(1);opacity:1}to{transform:translateY(26px) scale(1);opacity:0}}
+@media (prefers-reduced-motion:reduce){
+ .gmark .goo,.gmark .wob1,.gmark .wob2,.gmark .wob3,.gmark .wobB,
+ .gmark .string,.gmark .droplet,.gmark .droplet2{animation:none}
+}
+.brand .gmark{height:38px;width:auto;margin-bottom:-6px}
+.hero .gmark{height:112px;width:auto;margin-bottom:26px}
+footer .gmark{height:78px;width:auto}
+
+/* Kid Niche additions: her voice, side by side with the machine's */
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+@media(max-width:640px){.pair{grid-template-columns:1fr}}
+.pair>div{border-radius:13px;padding:16px 18px;font-size:.95rem;line-height:1.55}
+.pair .hers{background:var(--green-t);border:1.5px solid var(--green)}
+.pair .theirs{background:var(--card);border:1px solid var(--line)}
+.pair .who{display:block;font-family:var(--sans);font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
+.pair .hers .who{color:var(--green-d)}
+.pair .theirs .who{color:var(--mute)}
+.pair blockquote{margin:0;color:var(--ink);font-size:.98rem}
+.pair .theirs blockquote{color:var(--body)}
+.pair cite{display:block;font-style:normal;font-family:var(--sans);font-size:.72rem;color:var(--mute);margin-top:9px}
+</style></head><body>
+
+<header><div class="wrap">
+  <a class="brand" href="#top">
+    <svg class="gmark gl" viewBox="0 0 200 250" overflow="visible" aria-hidden="true"><defs><linearGradient id="dgGrad-h" x1="0" y1="92" x2="0" y2="165" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5FA850"></stop><stop offset="100%" stop-color="#43813A"></stop></linearGradient><linearGradient id="lgGrad-h" x1="0" y1="92" x2="0" y2="215" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#D9EDA0"></stop><stop offset="55%" stop-color="#BFE07A"></stop><stop offset="100%" stop-color="#A3CE55"></stop></linearGradient><radialGradient id="pinkGrad-h" cx="40%" cy="34%" r="75%"><stop offset="0%" stop-color="#F887B2"></stop><stop offset="55%" stop-color="#E84D8A"></stop><stop offset="100%" stop-color="#CE3672"></stop></radialGradient><linearGradient id="creepGrad-h" x1="0" y1="90" x2="0" y2="124" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#E3F2B0"></stop><stop offset="100%" stop-color="#C3E181"></stop></linearGradient></defs><g class="goo"><g fill="url(#dgGrad-h)"><ellipse cx="100" cy="110" rx="38" ry="15"></ellipse><path class="wobB" d="M 86 100 C 86 116, 87 130, 88 142 C 88 148, 91 149, 92 142 C 93 130, 92 114, 92 100 Z"></path><path d="M 114 100 C 114 112, 115 124, 116 134 C 116 140, 119 141, 120 134 C 121 124, 120 110, 120 100 Z"></path></g><g fill="url(#lgGrad-h)"><path class="wob1" d="M 64 100 C 63 120, 65 138, 66 152 C 66 164, 68 172, 74 173 C 80 172, 83 165, 82 154 C 84 136, 85 116, 86 100 Z"></path><path class="wob2" d="M 92 100 C 91 128, 93 152, 94 172 C 94 188, 97 199, 104 200 C 111 199, 114 190, 112 174 C 113 150, 114 124, 114 100 Z"></path><path class="wob3" d="M 120 100 C 119 116, 120 130, 121 142 C 121 152, 123 159, 129 160 C 134 159, 137 153, 135 144 C 136 130, 137 114, 137 100 Z"></path></g></g><path class="string" d="M 104 199 L 104 209" stroke="#BFE07A" stroke-width="2.5" stroke-linecap="round" fill="none"></path><g class="droplet"><circle cx="104" cy="213" r="7" fill="#BFE07A"></circle><circle cx="102" cy="211" r="2" fill="#F1F8DC" opacity="0.9"></circle></g><circle class="droplet2" cx="74" cy="186" r="4.5" fill="#BFE07A"></circle><circle cx="100" cy="70" r="52" fill="url(#pinkGrad-h)"></circle><path d="M 56 98 A 52 52 0 0 0 144 98 C 142 94, 138 92, 134 94 C 130 97, 129 102, 125 104 C 119 106, 116 98, 110 96 C 104 94, 103 102, 98 105 C 93 107, 90 100, 84 97 C 78 95, 76 100, 71 102 C 66 103, 62 100, 56 98 Z" fill="url(#creepGrad-h)"></path><path d="M 68 106 A 42 42 0 0 0 84 116" fill="none" stroke="#F1F8DC" stroke-width="4" stroke-linecap="round" opacity="0.85"></path><path d="M 97 144 Q 103 151 109 144" fill="none" stroke="#55974A" stroke-width="4" stroke-linecap="round"></path><g stroke="#F1F8DC" fill="none" stroke-linecap="round"><path d="M 97 128 C 96 148, 97 166, 100 182" stroke-width="4.5" opacity="0.85"></path><path d="M 69 118 C 68 132, 70 146, 71 156" stroke-width="3.5" opacity="0.8"></path><path d="M 124 114 C 123 124, 125 138, 126 148" stroke-width="3.5" opacity="0.8"></path></g><circle cx="100" cy="192" r="2.5" fill="#F1F8DC" opacity="0.9"></circle><circle cx="100" cy="72" r="13" fill="#FDF6EC"></circle><circle cx="100" cy="72" r="13" fill="none" stroke="#C22F6B" stroke-width="3" opacity="0.3"></circle><path class="sheen" d="M 62 46 A 44 44 0 0 1 82 28" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"></path><circle class="sheen" cx="92" cy="26" r="3.5" fill="#FFFFFF"></circle></svg>
+    <span style="display:flex;flex-direction:column;line-height:1.15"><span class="bw">glazed<span>web</span></span><span>for Kid Niche</span></span>
+  </a>
+  <nav>
+    <a href="#found">What we found</a>
+    <a href="#own">Ownership</a>
+    <a href="#build">The build</a>
+    <a href="#cost">Cost</a>
+  </nav>
+</div></header>
+
+<div class="wrap" id="top">
+<div class="hero">
+  <svg class="gmark mark" viewBox="0 0 200 250" overflow="visible" aria-hidden="true"><defs><linearGradient id="dgGrad-x" x1="0" y1="92" x2="0" y2="165" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5FA850"></stop><stop offset="100%" stop-color="#43813A"></stop></linearGradient><linearGradient id="lgGrad-x" x1="0" y1="92" x2="0" y2="215" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#D9EDA0"></stop><stop offset="55%" stop-color="#BFE07A"></stop><stop offset="100%" stop-color="#A3CE55"></stop></linearGradient><radialGradient id="pinkGrad-x" cx="40%" cy="34%" r="75%"><stop offset="0%" stop-color="#F887B2"></stop><stop offset="55%" stop-color="#E84D8A"></stop><stop offset="100%" stop-color="#CE3672"></stop></radialGradient><linearGradient id="creepGrad-x" x1="0" y1="90" x2="0" y2="124" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#E3F2B0"></stop><stop offset="100%" stop-color="#C3E181"></stop></linearGradient></defs><g class="goo"><g fill="url(#dgGrad-x)"><ellipse cx="100" cy="110" rx="38" ry="15"></ellipse><path class="wobB" d="M 86 100 C 86 116, 87 130, 88 142 C 88 148, 91 149, 92 142 C 93 130, 92 114, 92 100 Z"></path><path d="M 114 100 C 114 112, 115 124, 116 134 C 116 140, 119 141, 120 134 C 121 124, 120 110, 120 100 Z"></path></g><g fill="url(#lgGrad-x)"><path class="wob1" d="M 64 100 C 63 120, 65 138, 66 152 C 66 164, 68 172, 74 173 C 80 172, 83 165, 82 154 C 84 136, 85 116, 86 100 Z"></path><path class="wob2" d="M 92 100 C 91 128, 93 152, 94 172 C 94 188, 97 199, 104 200 C 111 199, 114 190, 112 174 C 113 150, 114 124, 114 100 Z"></path><path class="wob3" d="M 120 100 C 119 116, 120 130, 121 142 C 121 152, 123 159, 129 160 C 134 159, 137 153, 135 144 C 136 130, 137 114, 137 100 Z"></path></g></g><path class="string" d="M 104 199 L 104 209" stroke="#BFE07A" stroke-width="2.5" stroke-linecap="round" fill="none"></path><g class="droplet"><circle cx="104" cy="213" r="7" fill="#BFE07A"></circle><circle cx="102" cy="211" r="2" fill="#F1F8DC" opacity="0.9"></circle></g><circle class="droplet2" cx="74" cy="186" r="4.5" fill="#BFE07A"></circle><circle cx="100" cy="70" r="52" fill="url(#pinkGrad-x)"></circle><path d="M 56 98 A 52 52 0 0 0 144 98 C 142 94, 138 92, 134 94 C 130 97, 129 102, 125 104 C 119 106, 116 98, 110 96 C 104 94, 103 102, 98 105 C 93 107, 90 100, 84 97 C 78 95, 76 100, 71 102 C 66 103, 62 100, 56 98 Z" fill="url(#creepGrad-x)"></path><path d="M 68 106 A 42 42 0 0 0 84 116" fill="none" stroke="#F1F8DC" stroke-width="4" stroke-linecap="round" opacity="0.85"></path><path d="M 97 144 Q 103 151 109 144" fill="none" stroke="#55974A" stroke-width="4" stroke-linecap="round"></path><g stroke="#F1F8DC" fill="none" stroke-linecap="round"><path d="M 97 128 C 96 148, 97 166, 100 182" stroke-width="4.5" opacity="0.85"></path><path d="M 69 118 C 68 132, 70 146, 71 156" stroke-width="3.5" opacity="0.8"></path><path d="M 124 114 C 123 124, 125 138, 126 148" stroke-width="3.5" opacity="0.8"></path></g><circle cx="100" cy="192" r="2.5" fill="#F1F8DC" opacity="0.9"></circle><circle cx="100" cy="72" r="13" fill="#FDF6EC"></circle><circle cx="100" cy="72" r="13" fill="none" stroke="#C22F6B" stroke-width="3" opacity="0.3"></circle><path class="sheen" d="M 62 46 A 44 44 0 0 1 82 28" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"></path><circle class="sheen" cx="92" cy="26" r="3.5" fill="#FFFFFF"></circle></svg>
+  <div class="k">Website proposal · Kid Niche Christian Books</div>
+  <h1>Do you own<br>your website?<br><em>You wrote the books.<br>Who wrote the website?</em></h1>
+  <p class="sub">We read kidniche.com page by page: what it weighs, what it tells search engines, and whose name is in the footer. This is what we found, and what we would build in its place: a site that carries your words exactly as you wrote them, and that belongs to you the way your books do.</p>
+  <div class="forwho">
+    Prepared for <b>Susan Case Bonner</b><br>
+    by <b>Kevin Hershock · Glazed Web</b><br>
+    Marshall, Michigan · August 2026<br>
+    <b>Every claim below links to the proof.</b>
+  </div>
+
+  <div class="tldr">
+    <div class="k">The short version</div>
+    <ul>
+      <li><span class="n">01</span><span>Your shop page tells Google you sell <b>&ldquo;stylish, durable apparel and accessories for infants and toddlers.&rdquo;</b> You sell prayer books.</span></li>
+      <li><span class="n">02</span><span>Eight of your nine book pages give Google <b>no description at all</b>, and every one of them is headed &ldquo;The Kid Niche Shop&rdquo; instead of the book&rsquo;s name.</span></li>
+      <li><span class="n">03</span><span>The address that should hold your <b>privacy policy</b> serves your exchange policy instead. There is no privacy policy on the site.</span></li>
+      <li><span class="n">04</span><span>Your homepage is a <b>5.8&nbsp;MB download across 70 files</b>. Even the &ldquo;page not found&rdquo; page weighs three quarters of a megabyte.</span></li>
+      <li><span class="n">05</span><span><b>GoDaddy&rsquo;s name is in your footer</b>, thirteen plugins hold the site up, and about $125 a month keeps it that way. Stop paying, and there is no website.</span></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<section id="found"><div class="wrap">
+  <div class="k">Section one</div><div class="rule"></div>
+  <h2>What we found.</h2>
+  <p>First, what this is not. It is not a critique of your books, your ministry, or a single sentence you wrote. Your writing is the best thing on the site. The headings that sound like a person, sound like you:</p>
+
+  <div class="pair">
+    <div class="hers"><span class="who">You wrote</span>
+      <blockquote>&ldquo;Tweens love to communicate. . . So teach them to communicate with God.&rdquo;</blockquote>
+      <cite>Your homepage</cite>
+    </div>
+    <div class="theirs"><span class="who">The machine wrote</span>
+      <blockquote>&ldquo;Explore Kids Clothing at Kid Niche. Find stylish, durable apparel and accessories for infants and toddlers with easy returns and quality guarantees.&rdquo;</blockquote>
+      <cite>What Google is shown for your shop page</cite>
+    </div>
+  </div>
+  <div class="pair">
+    <div class="hers"><span class="who">You wrote</span>
+      <blockquote>&ldquo;Call or text. (We love texts &mdash; please include your name.)&rdquo;</blockquote>
+      <cite>Your contact page</cite>
+    </div>
+    <div class="theirs"><span class="who">The machine wrote</span>
+      <blockquote>&ldquo;Explore kids activities with Kid Niche. Access seasonal ideas, printable templates, and safety tips for fun, educational play.&rdquo;</blockquote>
+      <cite>What Google is shown for your blog</cite>
+    </div>
+  </div>
+
+  <p>Both columns are live on kidniche.com today. Only one of them is yours. The generic copy all lives in the layer you never see when you look at your own site: the page titles, the descriptions Google prints under your name, the labels on your archives. <strong>Nobody who wrote &ldquo;we love texts&rdquo; also wrote &ldquo;durable apparel and accessories.&rdquo;</strong> What follows is about that machine layer and the platform underneath it, checked against your live site on <strong>21 August 2026</strong>. Every claim links to the page that proves it.</p>
+
+  <div class="claim">
+    <h4>Your shop page is filed under baby clothes</h4>
+    <p>The title Google reads for the page that sells your books is <span class="mono">Kids Clothing | Kid Niche</span>, and its description promises apparel with &ldquo;easy returns and quality guarantees.&rdquo; Nothing on the page is clothing. A grandmother searching for Christian prayer books for kids, your exact phrase, is being shown a children&rsquo;s clothing store.</p>
+    <a class="verify" href="https://kidniche.com/shop/" target="_blank" rel="noopener">Open your shop page, then view its title ↗</a>
+  </div>
+  <div class="claim">
+    <h4>The machine layer misdescribes page after page</h4>
+    <p>Your blog, which your h1 correctly calls <strong>Susan Case Bonner&rsquo;s Blog</strong>, is described to Google as a seasonal kids-crafts site. Your reviews page, where a university dean and a magazine editor praise your books, is described as &ldquo;top-rated children&rsquo;s items and expert insights.&rdquo; Your account page is titled <span class="mono">Account Portal | Account Portal</span>. Your about page title reads <span class="mono">Children&rsquo;S</span>, with a capital S after the apostrophe, in the one place a stranger meets you. And three descriptions still carry pasted sales-template scraps like &ldquo;Call now: Review website terms for Kid Niche.&rdquo;</p>
+    <a class="verify" href="https://kidniche.com/about/" target="_blank" rel="noopener">Open your about page ↗</a>
+    <span class="verify plain">Titles visible in each page&rsquo;s source and in Google results</span>
+  </div>
+  <div class="claim">
+    <h4>The pages that sell say nothing to search engines</h4>
+    <p>Eight of your nine product pages carry <strong>no description at all</strong>, so Google writes its own snippet, and on a store page it usually picks shipping boilerplate. Every product page is also headed <strong>&ldquo;The Kid Niche Shop&rdquo;</strong> rather than the book&rsquo;s name, on the page whose whole job is to sell that book. The same gap runs through all seventeen blog posts and all 240 activity pages: of 85 pages we sampled, <strong>60 had no description</strong>.</p>
+    <a class="verify" href="https://kidniche.com/product/picture-prayer-book-for-children-0-8/" target="_blank" rel="noopener">Open a book page ↗</a>
+  </div>
+  <div class="claim">
+    <h4>There is no privacy policy at the privacy policy address</h4>
+    <p><span class="mono">kidniche.com/privacy</span> serves your exchange policy for damaged books. The exchange policy is good and belongs on the site, but it is not a privacy policy, and the site takes accounts, memberships, card payments, and email signups. This one is not about search engines. It is about a promise the site should be making to your customers and currently is not.</p>
+    <a class="verify" href="https://kidniche.com/privacy/" target="_blank" rel="noopener">Open the page ↗</a>
+  </div>
+  <div class="claim">
+    <h4>The homepage is a 5.8 MB download</h4>
+    <p>We fetched every file your homepage references and added them up: <strong>5.8&nbsp;MB across 70 files</strong>, of which 1&nbsp;MB is the HTML alone, 647&nbsp;KB is JavaScript in 27 files, and 3.7&nbsp;MB is images. It is not just the homepage. Your about page is 922&nbsp;KB of HTML before a single picture loads, and the &ldquo;page not found&rdquo; page weighs 782&nbsp;KB. Every one of those bytes is a moment a visitor on a phone spends waiting.</p>
+    <a class="verify" href="https://kidniche.com/" target="_blank" rel="noopener">Open your homepage ↗</a>
+  </div>
+  <div class="claim">
+    <h4>A stock photo is the biggest thing on the page, and your own cover loads twice</h4>
+    <p>The largest file on your homepage, at <strong>978&nbsp;KB</strong>, is a purchased stock photo whose filename still records the receipt: <span class="mono">dreamstime_l_31828804-purchased-through-NMD-via-Shelly&hellip;</span> Meanwhile the Weave Your Word in Me cover is downloaded <strong>twice</strong>, as two separate half-megabyte copies uploaded two years apart. The painted illustration on your site, the woman whose open book lights the path, is the best visual asset you have, and it is competing for space with stock photography four times its size.</p>
+    <span class="verify plain">File names and sizes read from the homepage source</span>
+  </div>
+  <div class="claim">
+    <h4>The site argues with itself about what it contains</h4>
+    <p>Your <span class="mono">robots.txt</span> points search engines at one pair of sitemaps, generated by something called &ldquo;SEO Setup Plugin.&rdquo; A second system, Yoast, serves a different sitemap index with five child maps. Both answer. Google is handed two accounts of your site and left to pick. Meanwhile your cart, your checkout, and your account page are all submitted for indexing, three pages that should never appear in a search result, and your checkout is titled, word for word, <span class="mono">Cart | Shopping Cart</span>.</p>
+    <a class="verify" href="https://kidniche.com/robots.txt" target="_blank" rel="noopener">Open your robots.txt ↗</a>
+  </div>
+  <div class="claim">
+    <h4>When someone shares your site, the preview crops your artwork</h4>
+    <p>The image that appears when kidniche.com is pasted into a text or a Facebook post is a <strong>2000 by 754 strip</strong>. Every messaging app crops previews closer to a rectangle of about 1.9 to 1, which slices the ends off both the painting and the sentence written across it. The image also has a <strong>video play button burned into the middle</strong>, so a link to your homepage previews as a video that does not exist. For a business spread by parents and grandparents sharing links with each other, the share card is not a detail.</p>
+    <a class="verify" href="https://kidniche.com/wp-content/uploads/2026/03/1-Candara-and-Tekton-Pro-iS-1.jpg" target="_blank" rel="noopener">Open the image ↗</a>
+  </div>
+  <div class="claim">
+    <h4>Your business mail goes to Gmail</h4>
+    <p>Your contact page publishes a personal Gmail address. You already own kidniche.com, and an address like <span class="mono">susan@kidniche.com</span> can receive mail there at no monthly cost. This is not a fault so much as a free upgrade waiting to happen: when a homeschool co-op orders thirty curricula, the reply comes from your ministry&rsquo;s own name. We set this up for clients at no charge and show you how it works.</p>
+    <a class="verify" href="https://kidniche.com/contact/" target="_blank" rel="noopener">Open your contact page ↗</a>
+  </div>
+
+  <p class="note" style="margin-top:20px">Not one of these is something you could fix by editing a page. They live in the layer the page builder and its plugins control, and they are what that machinery does regardless of who is typing.</p>
+</div></section>
+
+<section id="own"><div class="wrap">
+  <div class="k">Section two</div><div class="rule"></div>
+  <h2>The part that matters most.</h2>
+  <p style="font-size:1.1rem;color:var(--ink)">Scroll to the bottom of any page on kidniche.com. The last thing on it is a link to GoDaddy&rsquo;s design services, with their logo loading from their servers.</p>
+  <p>You built the site with GoDaddy&rsquo;s website design service, and the service model works like rent. Around <strong>$125 a month</strong> keeps it standing. We counted what the pages themselves load: the Beaver Builder page builder and its theme, two add-on packs whose job is to extend the page builder, WooCommerce plus separate Memberships and Subscriptions engines, an image optimizer, a caching plugin, a form plugin, a translation plugin, an SEO plugin, and a link checker. <strong>Thirteen plugins and a design service, all inside that monthly bill.</strong></p>
+  <p>The monthly is not the real cost. The real cost is that the arrangement never ends. $125 a month is $1,500 a year, and each year of it buys another year of exactly what you have: the clothing-store title, the 5.8&nbsp;MB homepage, the machine descriptions. Five more years of it is <strong>$7,500</strong>, and at the end of them you still would not own a website. The books are yours. The words are yours. The website that sells them stops existing the month the payments do.</p>
+
+  <div class="demo" style="text-align:left;background:var(--card);color:var(--body);border:2px solid var(--green)">
+    <div class="k" style="color:var(--green-d)">What we would do instead</div>
+    <h3 style="color:var(--ink);margin-top:8px">You own it. All of it.</h3>
+    <p style="color:var(--body);margin:0">When the build fee is paid, the site is yours in writing: design, source code, content, accounts. The store, the member login, and the activity library are written into the site itself, so there is no plugin stack to license and nothing that stops working when a renewal lapses. If you ever leave us you get the working project: repository, hosting, logins. <strong>Not a snapshot. Not an export.</strong> Month to month, thirty days&rsquo; notice, no exit fee. Your domain stays in your name. That clause is titled <em>No hostage-taking</em>, because we would rather say it plainly than bury it.</p>
+  </div>
+
+  <h3>Three questions worth asking, whatever you decide</h3>
+  <table class="cmp">
+    <tr><td>What exactly does the $125 cover?</td><td colspan="2">Check whether every plugin license is inside it or whether any renew separately. Whatever the true all-in number is, that is the rent, and it buys another year of exactly what you have.</td></tr>
+    <tr><td>Who owns the artwork files?</td><td colspan="2">Your covers and the commissioned painting are the heart of the site. Make sure you hold the original files yourself, not just the copies uploaded to WordPress.</td></tr>
+    <tr><td>What would you receive if you left?</td><td colspan="2">Ask what you would actually be handed if you stopped paying: a working website, or an export of content that once was one.</td></tr>
+  </table>
+</div></section>
+
+<section id="build"><div class="wrap">
+  <div class="k">Section three</div><div class="rule"></div>
+  <h2>What we would build.</h2>
+  <p style="font-size:1.05rem;color:var(--ink)"><strong>Your words come across unchanged.</strong> You are an author. The writing is the product, so your page copy, your headings, and your voice migrate exactly as they are. The only words we write are the ones currently written by the machine: the titles, the descriptions, the labels. Those get written by hand, every page, in your voice.</p>
+
+  <table class="cmp">
+    <tr><th></th><th>Your site today</th><th>The rebuild</th></tr>
+    <tr><td>Your books</td><td>Every product page headed &ldquo;The Kid Niche Shop,&rdquo; eight of nine with no description</td><td>Each book gets its own page under <span class="tick">its own name</span>: the cover large, your description, the age range, and the endorsements from Dr. Uecker and Tina Houser beside the books they praise</td></tr>
+    <tr><td>The store</td><td>WooCommerce plus a Memberships engine plus a Subscriptions engine, three licensed plugins deep</td><td>A store written into the site with Stripe checkout. Nine products is a store we build well. Digital lessons deliver themselves by email the moment payment clears</td></tr>
+    <tr><td>Weave Your Word activities</td><td>240 lesson pages gated behind a membership plugin</td><td>The same library, same lesson numbering, same access rules, written into the site and fast. Nothing your pilot families know changes</td></tr>
+    <tr><td>Your free sample</td><td>One page, with nothing on the front door pointing to it</td><td>On the homepage where it belongs, and the sample arrives from your own domain, not from a plugin</td></tr>
+    <tr><td>Your artwork</td><td>Stock photos beside your commissioned painting, one of them 978 KB with the purchase receipt in its filename</td><td>Your painting and your covers <span class="tick">carry the design</span>. The stock photography goes</td></tr>
+    <tr><td>Email</td><td>A personal Gmail address on the contact page</td><td><span class="mono">susan@kidniche.com</span>, receiving and sending at your own domain, set up free</td></tr>
+    <tr><td>Sharing</td><td>A cropped strip with a play button burned in</td><td>A share card sized for every app, your painting uncropped, so a shared link looks like the ministry it is</td></tr>
+    <tr><td>Speed</td><td>5.8 MB homepage, 70 files</td><td>Under one tenth of that. Our launch bar is measured, not eyeballed: every page checked at phone and desktop widths before it ships</td></tr>
+    <tr><td>Your standing with Google</td><td>313 addresses, two competing sitemaps, cart and checkout submitted for indexing</td><td>All 313 addresses accounted for, with redirects where names change, so nothing you have earned in search is lost in the move</td></tr>
+  </table>
+
+  <div class="demo">
+    <div class="k">See it before you decide anything</div>
+    <h3>The demo is live right now</h3>
+    <p>Open your books. Read a lesson page. Try the free sample form. Everything you can click does what it looks like it does, and every word of the copy in it is yours.</p>
+    <a href="/demo" target="_blank" rel="noopener">Open the demo ↗</a>
+  </div>
+
+  <p class="note">Two things are yours to supply and ours to flag. We built the demo from the artwork and copy on your live site, used with your permission and never altered. Before launch we would want the original files for the painting and the covers, and your word on anything you have been meaning to rewrite, because launch is the cheapest moment to change it. One question we will ask early: the site currently machine-translates itself into seven languages. If reaching Spanish-speaking homeschool families matters to your ministry, we would rather build that properly than leave your theology to a translation widget.</p>
+</div></section>
+
+<section id="cost"><div class="wrap">
+  <div class="k">Section four</div><div class="rule"></div>
+  <h2>What it costs.</h2>
+
+  <div class="pricebox">
+    <div><div class="n">$2,000</div><div class="l">One-time build. Design, development, the store, the member area, migration of all 313 pages, launch. Half to start, half on launch.</div></div>
+    <div><div class="n">$99<span style="font-size:1rem;color:var(--mute)">/mo</span></div><div class="l">Hosting, security, backups, updates, and ongoing content edits. When you add a book, we build its page. That is included.</div></div>
+  </div>
+  <p>That is <strong>$3,188</strong> across the first twelve months, then <strong>$1,188 a year</strong>. Extra work beyond the ordinary is always quoted and approved before it starts, so nothing lands on your bill by surprise. And unlike your current stack, there are no plugin renewals underneath this number. There are no plugins.</p>
+
+  <h3>How that compares to staying put</h3>
+  <p>At $125 a month, staying put costs <strong>$7,500 over the next five years</strong>. The rebuild plus five years of our hosting is <strong>$7,940</strong>. Over five years the two paths cost within a few hundred dollars of each other, and the difference between them is not the money. One path ends with a website you own outright and a monthly bill that dropped by $26. The other ends exactly where it started. If your all-in number is different from $125, put the real one in and the math does itself. Nothing is sent anywhere; it runs entirely in your browser.</p>
+
+  <div class="calc">
+    <label for="rate">What does your website cost you each month, all in?</label>
+    <div class="inputrow">
+      <div class="money"><span>$</span><input id="rate" type="number" min="0" max="5000" step="5" placeholder="125" inputmode="numeric" aria-label="Your current monthly website cost"><em>/ month</em></div>
+      <div class="presets">
+        <button class="chip" data-v="100">$100</button>
+        <button class="chip" data-v="125">$125</button>
+        <button class="chip" data-v="150">$150</button>
+        <button class="chip" data-v="200">$200</button>
+      </div>
+    </div>
+
+    <div class="out" id="out">
+      <div class="bars">
+        <div class="bar stay"><div class="lab"><span>Five more years of what you have</span><b id="stayN">&ndash;</b></div><div class="track"><div class="fill" id="stayB" style="width:0"></div></div></div>
+        <div class="bar us"><div class="lab"><span>Rebuild + five years with Glazed</span><b id="usN">$7,940</b></div><div class="track"><div class="fill" id="usB" style="width:0"></div></div></div>
+      </div>
+      <div class="verdict" id="verdict"></div>
+      <p class="calcnote" id="cnote"></p>
+    </div>
+  </div>
+
+  <p>We will say the honest part before the calculator does. At exactly $125 a month, staying is a few hundred dollars cheaper across five years, on paper. What the paper does not show: your monthly drops from $125 to $99 the day you launch, our monthly can rise at most once a year and you can leave with no penalty if it ever does, and everything the build fee bought is yours to keep. Rent buys years. The build fee buys the thing.</p>
+  <p><strong>Year one costs more than doing nothing.</strong> You are buying a website; that is a real number on top of a bill you already have, and any proposal that hides it is not worth reading.</p>
+
+  <div class="demo" style="background:var(--card);color:var(--body);border:2px solid var(--line);text-align:left">
+    <div class="k" style="color:var(--green-d)">Worth saying plainly</div>
+    <p style="color:var(--body);margin:10px 0 0;max-width:none">We are a small shop in Marshall, Michigan, about a ten minute walk from Mansion Street. That is why the price looks the way it does, and it is also why you get the person who builds the thing on the phone when something needs changing. If you want a vendor with a ticketing portal, we are not that. If you want your website cared for by a neighbor who answers, <strong>we are exactly that.</strong></p>
+  </div>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <div class="k">Section five</div><div class="rule"></div>
+  <h2>What happens next.</h2>
+  <div class="step"><div class="no">1</div><div><h4>Look at the demo</h4><p>Ten minutes at <a href="/demo" target="_blank" rel="noopener">kidniche.glazedweb.com/demo</a>. It was built before this proposal, on our own time, because showing beats describing. If it is not right, that is useful information and it costs you nothing to say so.</p></div></div>
+  <div class="step"><div class="no">2</div><div><h4>A conversation, not a pitch</h4><p>Half an hour, at your place or ours. We are both in Marshall. Two things we would want to understand: how the Weave Your Word member families actually use the activity library week to week, and what you have been wishing the site could do that it does not.</p></div></div>
+  <div class="step"><div class="no">3</div><div><h4>Check your GoDaddy terms before you decide anything</h4><p>Confirm what the $125 covers, whether anything renews separately, and when the renewal dates fall. <strong>Check those before you make any decision</strong>, including the decision to stay. We will happily wait for the right window; there is no reason to pay two vendors at once.</p></div></div>
+  <div class="step"><div class="no">4</div><div><h4>Build</h4><p>Roughly four to six weeks from a signed scope to launch. The variable is how quickly artwork files and any copy changes come together on your side. The build itself runs to schedule, and your current site stays up untouched until the day the new one takes over.</p></div></div>
+
+  <h3>What we would need from you</h3>
+  <p>The original files for the painting and the book covers, your copy wherever you want it different from what is live, the list of current members so nobody loses access, and one person empowered to say yes. Since that person is you, the list is short.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <span class="bw" style="font-size:21px">glazed<span>web</span></span>
+    Kevin Hershock · Marshall, Michigan<br>
+    <a href="https://glazedweb.com" target="_blank" rel="noopener">glazedweb.com</a> · hello@glazedweb.com
+    <div class="conf">Prepared for Kid Niche Christian Books · August 2026 · Valid 60 days</div>
+  </div>
+  <svg class="gmark gl-foot" viewBox="0 0 200 250" overflow="visible" aria-hidden="true"><defs><linearGradient id="dgGrad-f" x1="0" y1="92" x2="0" y2="165" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#5FA850"></stop><stop offset="100%" stop-color="#43813A"></stop></linearGradient><linearGradient id="lgGrad-f" x1="0" y1="92" x2="0" y2="215" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#D9EDA0"></stop><stop offset="55%" stop-color="#BFE07A"></stop><stop offset="100%" stop-color="#A3CE55"></stop></linearGradient><radialGradient id="pinkGrad-f" cx="40%" cy="34%" r="75%"><stop offset="0%" stop-color="#F887B2"></stop><stop offset="55%" stop-color="#E84D8A"></stop><stop offset="100%" stop-color="#CE3672"></stop></radialGradient><linearGradient id="creepGrad-f" x1="0" y1="90" x2="0" y2="124" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#E3F2B0"></stop><stop offset="100%" stop-color="#C3E181"></stop></linearGradient></defs><g class="goo"><g fill="url(#dgGrad-f)"><ellipse cx="100" cy="110" rx="38" ry="15"></ellipse><path class="wobB" d="M 86 100 C 86 116, 87 130, 88 142 C 88 148, 91 149, 92 142 C 93 130, 92 114, 92 100 Z"></path><path d="M 114 100 C 114 112, 115 124, 116 134 C 116 140, 119 141, 120 134 C 121 124, 120 110, 120 100 Z"></path></g><g fill="url(#lgGrad-f)"><path class="wob1" d="M 64 100 C 63 120, 65 138, 66 152 C 66 164, 68 172, 74 173 C 80 172, 83 165, 82 154 C 84 136, 85 116, 86 100 Z"></path><path class="wob2" d="M 92 100 C 91 128, 93 152, 94 172 C 94 188, 97 199, 104 200 C 111 199, 114 190, 112 174 C 113 150, 114 124, 114 100 Z"></path><path class="wob3" d="M 120 100 C 119 116, 120 130, 121 142 C 121 152, 123 159, 129 160 C 134 159, 137 153, 135 144 C 136 130, 137 114, 137 100 Z"></path></g></g><path class="string" d="M 104 199 L 104 209" stroke="#BFE07A" stroke-width="2.5" stroke-linecap="round" fill="none"></path><g class="droplet"><circle cx="104" cy="213" r="7" fill="#BFE07A"></circle><circle cx="102" cy="211" r="2" fill="#F1F8DC" opacity="0.9"></circle></g><circle class="droplet2" cx="74" cy="186" r="4.5" fill="#BFE07A"></circle><circle cx="100" cy="70" r="52" fill="url(#pinkGrad-f)"></circle><path d="M 56 98 A 52 52 0 0 0 144 98 C 142 94, 138 92, 134 94 C 130 97, 129 102, 125 104 C 119 106, 116 98, 110 96 C 104 94, 103 102, 98 105 C 93 107, 90 100, 84 97 C 78 95, 76 100, 71 102 C 66 103, 62 100, 56 98 Z" fill="url(#creepGrad-f)"></path><path d="M 68 106 A 42 42 0 0 0 84 116" fill="none" stroke="#F1F8DC" stroke-width="4" stroke-linecap="round" opacity="0.85"></path><path d="M 97 144 Q 103 151 109 144" fill="none" stroke="#55974A" stroke-width="4" stroke-linecap="round"></path><g stroke="#F1F8DC" fill="none" stroke-linecap="round"><path d="M 97 128 C 96 148, 97 166, 100 182" stroke-width="4.5" opacity="0.85"></path><path d="M 69 118 C 68 132, 70 146, 71 156" stroke-width="3.5" opacity="0.8"></path><path d="M 124 114 C 123 124, 125 138, 126 148" stroke-width="3.5" opacity="0.8"></path></g><circle cx="100" cy="192" r="2.5" fill="#F1F8DC" opacity="0.9"></circle><circle cx="100" cy="72" r="13" fill="#201712"></circle><circle cx="100" cy="72" r="13" fill="none" stroke="#C22F6B" stroke-width="3" opacity="0.3"></circle><path class="sheen" d="M 62 46 A 44 44 0 0 1 82 28" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"></path><circle class="sheen" cx="92" cy="26" r="3.5" fill="#FFFFFF"></circle></svg>
+</div></footer>
+
+<script>
+(function(){
+ var BUILD=2000, MO=99, YEARS=5, MONTHS=YEARS*12;
+ var OURS=BUILD+MO*MONTHS;             /* 7,940 */
+ var input=document.getElementById('rate'), out=document.getElementById('out'),
+     stayN=document.getElementById('stayN'), usN=document.getElementById('usN'),
+     stayB=document.getElementById('stayB'), usB=document.getElementById('usB'),
+     verdict=document.getElementById('verdict'), cnote=document.getElementById('cnote'),
+     chips=[].slice.call(document.querySelectorAll('.chip'));
+ function money(n){return '$'+Math.round(n).toLocaleString('en-US');}
+ function calc(){
+  var r=parseFloat(input.value);
+  if(!(r>0)){out.classList.remove('show');chips.forEach(function(c){c.classList.remove('on')});return;}
+  var stay=r*MONTHS, max=Math.max(stay,OURS);
+  stayN.textContent=money(stay); usN.textContent=money(OURS);
+  stayB.style.width=(stay/max*100)+'%'; usB.style.width=(OURS/max*100)+'%';
+  var diff=stay-OURS;
+  if(Math.abs(diff)<250){
+   verdict.className='verdict';
+   verdict.innerHTML='<b>It is essentially a wash over five years</b>: near-identical spend, except one path ends with you owning your website and the other does not.';
+  }else if(diff>0){
+   verdict.className='verdict';
+   verdict.innerHTML='<b>Rebuilding saves you '+money(diff)+' over five years</b>, and you own the site at the end of it, instead of renting one.';
+  }else{
+   verdict.className='verdict neg';
+   verdict.innerHTML='<b>Staying put is '+money(-diff)+' cheaper over five years.</b> We would rather tell you that than talk you past it. The rebuild still buys you ownership, a site built this decade, and no lock-in, but on money alone, at this rate, it does not pay for itself in five years.';
+  }
+  var save=r-MO;
+  if(save>0){
+   var payback=Math.ceil(BUILD/save);
+   cnote.textContent='That is '+money(save)+' less every month, so the build pays for itself in month '+payback+
+    (payback>MONTHS?', which is beyond the five\u2011year window above.':'.');
+  }else if(save===0){
+   cnote.textContent='Our monthly is the same as yours, so the case here rests on ownership rather than on the monthly line.';
+  }else{
+   cnote.textContent='Our monthly is '+money(MO-r)+' higher than yours, so the case here rests on ownership rather than on the monthly line.';
+  }
+  out.classList.add('show');
+  chips.forEach(function(c){c.classList.toggle('on', parseFloat(c.dataset.v)===r);});
+ }
+ input.addEventListener('input',calc);
+ chips.forEach(function(c){c.addEventListener('click',function(){input.value=c.dataset.v;calc();});});
+})();
+</script>
+</body></html>
