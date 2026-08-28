@@ -1,7 +1,12 @@
 import GlazedPlate from "@/components/GlazedPlate";
 import { site } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 
-export default function Footer() {
+export default async function Footer() {
+  // Contact facts come through the seam so the owner panel's edits show
+  // here; the name and the prose stay on lib/site.ts, which the panel
+  // cannot touch on purpose.
+  const facts = await getFacts();
   return (
     <footer className="site-footer">
       <div className="wrap cols">
@@ -12,28 +17,28 @@ export default function Footer() {
             curriculum in the lovely historic town of Marshall, Michigan.
           </p>
           <p>
-            {site.address.street}
+            {facts.street}
             <br />
-            {site.address.city}, {site.address.state} {site.address.zip}
+            {facts.city}, {facts.state} {facts.zip}
           </p>
         </div>
         <div>
           <h2>Say hello</h2>
           <ul>
             <li>
-              <a href={site.phoneHref}>{site.phone}</a>
+              <a href={facts.phoneHref}>{facts.phone}</a>
             </li>
             <li>
               {/* Her line, verbatim. */}
               Call or text. (We love texts &mdash; please include your name.)
             </li>
             <li>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
+              <a href={`mailto:${facts.email}`}>{facts.email}</a>
             </li>
             <li>
-              <a href={site.social.facebook} rel="noopener">Facebook</a>
+              <a href={facts.facebook} rel="noopener">Facebook</a>
               {" · "}
-              <a href={site.social.pinterest} rel="noopener">Pinterest</a>
+              <a href={facts.pinterest} rel="noopener">Pinterest</a>
             </li>
           </ul>
         </div>

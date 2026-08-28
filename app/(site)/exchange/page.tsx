@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Exchange Policy · Damaged Book Replacement",
@@ -8,7 +8,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/exchange" },
 };
 
-export default function Exchange() {
+export default async function Exchange() {
+  const facts = await getFacts();
   return (
     <div className="wrap-narrow" style={{ padding: "56px 0" }}>
       <span className="kicker">The fine print, kept short</span>
@@ -18,7 +19,7 @@ export default function Exchange() {
       </p>
       <p style={{ marginTop: 16 }}>
         Email a photo of the damage to{" "}
-        <a href={`mailto:${site.email}`}>{site.email}</a> and we will promptly
+        <a href={`mailto:${facts.email}`}>{facts.email}</a> and we will promptly
         verify it and send a replacement, without extra shipping when
         requested.
       </p>

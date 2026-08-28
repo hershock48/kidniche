@@ -26,7 +26,9 @@ export default function Activities() {
         make or do. That is 240 activities, numbered to match the workbook.
       </p>
 
-      <div className="table-scroll" style={{ marginTop: 30 }}>
+      {/* tabIndex: a scroll region a keyboard cannot reach fails axe
+          scrollable-region-focusable the moment the table overflows (320px). */}
+      <div className="table-scroll" style={{ marginTop: 30 }} tabIndex={0} role="region" aria-label="The four units and their activities">
         <table className="plain">
           <thead>
             <tr>

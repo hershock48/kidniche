@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { products, dollars, site } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 import { PriceLine } from "@/components/BookCard";
 import { AddToCart } from "@/components/cart";
 
@@ -28,6 +29,7 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
   const { slug } = await params;
   const p = products.find((x) => x.slug === slug);
   if (!p) notFound();
+  const facts = await getFacts();
 
   return (
     <div className="wrap">
@@ -86,8 +88,8 @@ export default async function ProductPage({ params }: { params: Promise<Params> 
           )}
 
           <p style={{ marginTop: 16, fontSize: 14.5, color: "var(--ink-soft)" }}>
-            Questions? <a href={site.phoneHref}>Call or text {site.phone}</a>, or{" "}
-            <a href={`mailto:${site.email}`}>send an email</a>. Damaged in the
+            Questions? <a href={facts.phoneHref}>Call or text {facts.phone}</a>, or{" "}
+            <a href={`mailto:${facts.email}`}>send an email</a>. Damaged in the
             mail? See the <a href="/exchange">exchange policy</a>.
           </p>
         </div>

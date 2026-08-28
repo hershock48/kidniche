@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { site } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Contact Susan · Kid Niche Christian Books",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
 };
 
-export default function Contact() {
+export default async function Contact() {
+  const facts = await getFacts();
   return (
     <div className="wrap-narrow" style={{ padding: "56px 0" }}>
       <span className="kicker">Contact us</span>
@@ -23,8 +25,8 @@ export default function Contact() {
         <div className="story" style={{ margin: 0 }}>
           <h2 style={{ fontSize: 21 }}>By phone</h2>
           <p style={{ marginTop: 8 }}>
-            <a href={site.phoneHref} style={{ fontSize: 22, fontWeight: 800 }}>
-              {site.phone}
+            <a href={facts.phoneHref} style={{ fontSize: 22, fontWeight: 800 }}>
+              {facts.phone}
             </a>
           </p>
           {/* Her line, verbatim. */}
@@ -35,8 +37,8 @@ export default function Contact() {
         <div className="story" style={{ margin: 0 }}>
           <h2 style={{ fontSize: 21 }}>By email</h2>
           <p style={{ marginTop: 8 }}>
-            <a href={`mailto:${site.email}`} style={{ fontWeight: 800 }}>
-              {site.email}
+            <a href={`mailto:${facts.email}`} style={{ fontWeight: 800 }}>
+              {facts.email}
             </a>
           </p>
           <p style={{ color: "var(--ink-soft)" }}>
@@ -51,9 +53,9 @@ export default function Contact() {
         <p style={{ marginTop: 8 }}>
           {site.name}
           <br />
-          {site.address.street}
+          {facts.street}
           <br />
-          {site.address.city}, {site.address.state} {site.address.zip} USA
+          {facts.city}, {facts.state} {facts.zip} USA
         </p>
       </div>
     </div>

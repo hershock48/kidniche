@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { site } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -15,7 +15,8 @@ export const metadata: Metadata = {
  * approve it, and an attorney's hour is money well spent. On the README
  * checklist.
  */
-export default function Privacy() {
+export default async function Privacy() {
+  const facts = await getFacts();
   return (
     <div className="wrap-narrow" style={{ padding: "56px 0" }}>
       <span className="kicker">Plain language, on purpose</span>
@@ -62,8 +63,8 @@ export default function Privacy() {
         <div className="faq-item">
           <h3>Questions</h3>
           <p>
-            Write to <a href={`mailto:${site.email}`}>{site.email}</a> or call{" "}
-            <a href={site.phoneHref}>{site.phone}</a>, and Susan will answer.
+            Write to <a href={`mailto:${facts.email}`}>{facts.email}</a> or call{" "}
+            <a href={facts.phoneHref}>{facts.phone}</a>, and Susan will answer.
           </p>
         </div>
       </div>

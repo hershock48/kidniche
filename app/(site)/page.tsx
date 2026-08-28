@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BookCard, { PriceLine } from "@/components/BookCard";
 import { site, products, bands, studentReviews, faq } from "@/lib/site";
+import { getFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Kid Niche Christian Books · Prayer Books and Bible Curriculum for Kids",
@@ -11,7 +12,8 @@ export const metadata: Metadata = {
 
 const bySlug = (s: string) => products.find((p) => p.slug === s)!;
 
-export default function Home() {
+export default async function Home() {
+  const facts = await getFacts();
   const yellow = bySlug("picture-prayer-book-for-children-0-8");
   const green = bySlug("picture-prayer-book-with-bible-guide-for-families");
   const weave = bySlug("bible-and-prayer-curriculum-for-tweens-all-80-lessons");
@@ -33,18 +35,18 @@ export default function Home() {
               name: site.name,
               url: site.domain,
               logo: `${site.domain}/assets/brand/kid-niche-logo.png`,
-              telephone: "+1-231-360-7318",
-              email: site.email,
+              telephone: facts.phoneSchema,
+              email: facts.email,
               founder: { "@type": "Person", name: site.owner },
               address: {
                 "@type": "PostalAddress",
-                streetAddress: site.address.street,
-                addressLocality: site.address.city,
-                addressRegion: site.address.state,
-                postalCode: site.address.zip,
+                streetAddress: facts.street,
+                addressLocality: facts.city,
+                addressRegion: facts.state,
+                postalCode: facts.zip,
                 addressCountry: "US",
               },
-              sameAs: [site.social.facebook, site.social.pinterest],
+              sameAs: [facts.facebook, facts.pinterest],
             },
             {
               "@context": "https://schema.org",

@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Fraunces, Nunito_Sans } from "next/font/google";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { CartProvider } from "@/components/cart";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -41,19 +38,15 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * The header, footer, cart and skip link live in app/(site)/layout.tsx, not
+ * here: /admin is under this root too and the owner panel must not carry the
+ * shop's chrome. This layout is only the document shell.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body>
-        <a className="skip" href="#main">
-          Skip to content
-        </a>
-        <CartProvider>
-          <Header />
-          <main id="main">{children}</main>
-          <Footer />
-        </CartProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

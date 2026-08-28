@@ -11,9 +11,13 @@
  */
 
 import { useState } from "react";
-import { site } from "@/lib/site";
 
-export default function SampleForm() {
+/**
+ * `email` comes from the server page via lib/content.ts: a client component
+ * cannot read the panel's store, so this is the one surface that takes its
+ * fact as a prop (named in the README).
+ */
+export default function SampleForm({ email }: { email: string }) {
   const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
 
@@ -35,7 +39,7 @@ export default function SampleForm() {
     <form
       className="stack"
       style={{ marginTop: 22 }}
-      action={`mailto:${site.email}?subject=${encodeURIComponent("Free sample, please")}`}
+      action={`mailto:${email}?subject=${encodeURIComponent("Free sample, please")}`}
       method="post"
       encType="text/plain"
       onSubmit={(e) => {

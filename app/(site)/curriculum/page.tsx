@@ -31,7 +31,9 @@ export default function Curriculum() {
         <h2 id="units-h" style={{ fontSize: 26 }}>
           Four units. Eighty lessons. One prayer.
         </h2>
-        <div className="table-scroll" style={{ marginTop: 16 }}>
+        {/* tabIndex: same scrollable-region-focusable fix as /activities;
+            this table overflows at 320 the same way. */}
+        <div className="table-scroll" style={{ marginTop: 16 }} tabIndex={0} role="region" aria-label="The four units of the curriculum">
           <table className="plain">
             <thead>
               <tr>

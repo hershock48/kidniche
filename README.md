@@ -22,6 +22,11 @@ npm run build && npm start     # production on :4490 — audit THIS, never dev
 **Every business fact is in `lib/site.ts`** — name, address, phone, products,
 prices, her FAQ, student quotes, blog post list. A correction is one edit.
 
+**Contact facts can also be edited from the owner panel** (`/admin`, see
+below). Pages read those through `lib/content.ts`, which lays the panel's
+stored edits over the `lib/site.ts` values; `site.ts` stays the seed and the
+safety net, and clearing an edit in the panel returns the site to it.
+
 Surfaces that CANNOT read from `lib/site.ts` (change them by hand):
 
 - `public/pitch/kidniche/index.html` — the proposal (self-contained, has its
@@ -29,6 +34,38 @@ Surfaces that CANNOT read from `lib/site.ts` (change them by hand):
 - `public/pitch/kidniche/og.jpg` — the proposal link card
 - `app/layout.tsx` — the site-wide title/description defaults
 - This README
+
+Surfaces that cannot read from `lib/content.ts` (panel edits reach them
+another way): `SampleForm.tsx` is a client component, so its page passes the
+effective email in as a prop.
+
+## The owner panel (/admin) — session 1 of 3
+
+The per-site owner panel from the Glaze Panel sketch (Aug 2026): every screen
+is a form over rows, never a design surface. Built in this repo first;
+extraction into a product waits for a second client, per the graduation rule.
+
+**Built now:** PIN login, the dashboard, and the business-facts editor
+(phone, email, address, social links; whitelisted per field in
+`lib/panel/facts-def.ts`). **Sessions 2 and 3:** blog with photo upload and
+preview, then stories/products/announcement as collection configs plus the
+leads inbox wired to Resend.
+
+Bones ported from scooplist (glaze/catalog/apps.md): the two-backend store
+(`lib/panel/store.ts`, postgres when any `*_DATABASE_URL` exists, memory
+otherwise, self-creating table) and the PIN gate (`lib/panel/auth.ts`,
+HMAC cookie, 5-miss 10-minute lockout, 30-day session). A gate, not a
+vault: nothing behind it moves money.
+
+How an edit goes live: the facts route stores overrides, then calls
+`revalidatePath("/", "layout")`. Site pages stay fully static; they re-render
+with the new values on the next request. No database attached means the
+panel runs on memory and SAYS SO on its own screens (demo-honesty rule);
+edits then vanish on restart by design.
+
+`.env.example` names the three launch variables: `PANEL_PIN` (until set, the
+PIN falls back to the shop phone's last four, 7318), `PANEL_SECRET`,
+`DATABASE_URL` (Vercel > Storage > Neon, free tier).
 
 Her prose on /about, /reviews, /contact, the homepage bands, and the product
 details/customer stories is **verbatim from the live site** (fetched 21 Aug
@@ -86,6 +123,13 @@ details/customer stories is **verbatim from the live site** (fetched 21 Aug
   URLs need redirect mapping either way.
 - `app/favicon.ico` must exist (browsers request it unconditionally; its
   absence was the one console 404 the auditor caught).
+- The site's header/footer/cart frame lives in **`app/(site)/layout.tsx`**,
+  not the root layout, so `/admin` renders without the shop chrome. Because
+  only a ROOT `not-found.tsx` catches unmatched URLs, that file rebuilds the
+  frame by hand; change the two together.
+- The panel's whitelist (`lib/panel/facts-def.ts`) drives the editor form,
+  the save route's validation, and the merge in `lib/content.ts`. Add a
+  field there and all three follow; add it anywhere else and it will not.
 
 ## PLACEHOLDER / unconfirmed facts (say these out loud at handover)
 
@@ -105,6 +149,10 @@ details/customer stories is **verbatim from the live site** (fetched 21 Aug
       still needed.
 - [ ] **GoDaddy**: what the $125/mo covers and its renewal dates, before any
       cutover.
+- [ ] **Owner panel launch variables**: `PANEL_PIN` (Susan's real PIN, told
+      by phone; until set the demo PIN is the shop phone's last four),
+      `PANEL_SECRET`, and the Neon database. Without the database the panel
+      warns that edits are memory-only.
 
 ## Launch checklist (glaze/launch.md, work to zero before "done")
 

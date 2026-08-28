@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SampleForm from "./SampleForm";
+import { getFacts } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Free Sample · A Lesson and Activity for Your Family",
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/free-sample" },
 };
 
-export default function FreeSample() {
+export default async function FreeSample() {
+  const facts = await getFacts();
   return (
     <div className="wrap" style={{ padding: "56px 0" }}>
       <div className="grid-2" style={{ alignItems: "center", gap: 44 }}>
@@ -24,7 +26,7 @@ export default function FreeSample() {
             </a>
             .
           </p>
-          <SampleForm />
+          <SampleForm email={facts.email} />
         </div>
         <div style={{ display: "flex", justifyContent: "center" }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
