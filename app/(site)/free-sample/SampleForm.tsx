@@ -59,8 +59,8 @@ export default function SampleForm({ email }: { email: string }) {
         Send me the free sample
       </button>
       <p className="demo-note">
-        Concept build: submitting shows what the live site would do, and sends
-        nothing anywhere.
+        This is a demonstration: submitting shows what the live site would do,
+        and sends nothing anywhere.
       </p>
     </form>
   );
